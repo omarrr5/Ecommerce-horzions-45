@@ -17,6 +17,12 @@ a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover{
+  color: black;
+  text-decoration: none;
 }
 
 .nav {
@@ -24,7 +30,9 @@ a {
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background: #34B549;
+  background: #34B549;  
+  text-decoration: none;
+
 }
 .nav__brand {
   text-transform: uppercase;
