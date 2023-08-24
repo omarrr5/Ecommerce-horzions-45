@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <nav className="nav">
       <a href="#" className="nav__brand">
-        Horizons 45 Technology
+        Horizons 45 Technology - Cyberjaya
       </a>
       <ul className={active}>
         <li className="nav__item">
