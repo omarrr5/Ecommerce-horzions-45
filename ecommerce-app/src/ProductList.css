@@ -43,4 +43,12 @@
     font-size: 15px;
   }
   
- 
+ .product-card span{
+   color: #006A4E;
+   font-weight: bold;
+ }
+
+ .product-card p img{
+   height: 15px;
+   width: 15px;
+ }

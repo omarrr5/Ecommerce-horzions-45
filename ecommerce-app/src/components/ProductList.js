@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../ProductList.css'; 
 import SearchBar from './SearchBar';
+import ratingIcon from '../images/favourites.png';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -38,8 +39,10 @@ const ProductList = () => {
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.title} />
             <h3>{product.title}</h3>
-            <p>Price: ${product.price}</p>
-            <p>Rating: {product.rating.rate} / 5</p>
+            <p>Price: <span>RM {product.price}</span></p>
+            <p>Rating: <img src={ratingIcon} />
+            <span>{product.rating.rate} / 5</span>
+              </p>
           </div>
         ))}
       </div>

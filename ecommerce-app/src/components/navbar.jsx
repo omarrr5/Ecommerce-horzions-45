@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../navbar.css";
 
+
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
@@ -16,7 +17,7 @@ function Navbar() {
   };
   return (
     <nav className="nav">
-      <a href="#" className="nav__brand">
+       <a href="#" className="nav__brand">
         Horizons 45 Technology - Cyberjaya
       </a>
       <ul className={active}>
