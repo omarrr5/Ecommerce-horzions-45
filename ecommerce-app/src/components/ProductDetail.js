@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import '../ProductDetails.css';
-import ratingIcon from '../images/favourites.png';
 
 const ProductDetail = () => {
   const { id } = useParams(); 
@@ -29,10 +28,8 @@ const ProductDetail = () => {
         <img src={product.image} alt={product.title} />
         <h3>{product.title}</h3>
         <p>Price: RM{product.price}</p>
-        <p>
-                Rating: <img src={ratingIcon} />
-                <span>{product.rating.rate} / 5</span>
-        </p>        <p>Description: {product.description}</p>
+        <p>Rating: {product.rating.rate} / 5</p>
+        <p>Description: {product.description}</p>
       </div>
     </div>
   );
