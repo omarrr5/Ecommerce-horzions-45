@@ -1,0 +1,28 @@
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-container img {
+    width: 100%; 
+    height: auto; 
+    width: 800px;
+    height: 400px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .carousel-container {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .carousel-container img {
+      max-width: 100%;
+      max-height: none;
+      width: auto;
+      height: auto;
+    }
+  }

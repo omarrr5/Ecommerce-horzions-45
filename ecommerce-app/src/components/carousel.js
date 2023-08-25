@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import slider1 from '../images/slider1.jpeg';
 import slider2 from '../images/slider2.png';
 import slider3 from '../images/slider3.avif';
+import '../carousel.css' 
 
 const Carousel = () => {
   const settings = {
