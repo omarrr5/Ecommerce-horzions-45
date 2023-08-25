@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; 
 import '../ProductList.css'; 
 import SearchBar from './SearchBar';
 import ratingIcon from '../images/favourites.png';
@@ -37,12 +38,15 @@ const ProductList = () => {
       <div className="product-list">
         {filteredProducts.map((product) => (
           <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>Price: <span>RM {product.price}</span></p>
-            <p>Rating: <img src={ratingIcon} />
-            <span>{product.rating.rate} / 5</span>
+            <Link to={`/product/${product.id}`} className="product-link">
+              <img src={product.image} alt={product.title} />
+              <h3>{product.title}</h3>
+              <p>Price: <span>RM {product.price}</span></p>
+              <p>
+                Rating: <img src={ratingIcon} />
+                <span>{product.rating.rate} / 5</span>
               </p>
+            </Link>
           </div>
         ))}
       </div>

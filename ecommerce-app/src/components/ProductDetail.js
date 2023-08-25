@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import '../ProductDetails.css';
+import ratingIcon from '../images/favourites.png';
 
-const ProductDetail = ({ match }) => {
+const ProductDetail = () => {
+  const { id } = useParams(); 
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const productId = match.params.productId;
-    axios.get(`https://fakestoreapi.com/products/${productId}`)
+    axios.get(`https://fakestoreapi.com/products/${id}`)
       .then((response) => {
         setProduct(response.data);
       })
       .catch((error) => {
         console.error('Error fetching product details:', error);
       });
-  }, [match.params.productId]);
+  }, [id]);
 
   if (!product) {
     return <div>Loading...</div>;
@@ -25,9 +28,11 @@ const ProductDetail = ({ match }) => {
       <div className="product-details">
         <img src={product.image} alt={product.title} />
         <h3>{product.title}</h3>
-        <p>Price: ${product.price}</p>
-        <p>Rating: {product.rating.rate} / 5</p>
-        <p>Description: {product.description}</p>
+        <p>Price: RM{product.price}</p>
+        <p>
+                Rating: <img src={ratingIcon} />
+                <span>{product.rating.rate} / 5</span>
+        </p>        <p>Description: {product.description}</p>
       </div>
     </div>
   );

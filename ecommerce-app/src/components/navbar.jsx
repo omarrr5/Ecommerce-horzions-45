@@ -22,7 +22,7 @@ function Navbar() {
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href="../" className="nav__link">
             Home
           </a>
         </li>
