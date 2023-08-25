@@ -26,3 +26,15 @@
       height: auto;
     }
   }
+
+  .slick-next {
+    background-color: #34B549;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .slick-prev {
+    background-color: #34B549;
+    border: none; 
+    border-radius: 10px;
+  }
