@@ -6,43 +6,43 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     text-align: center;
-  }
-  
-  .product-detail-image {
+}
+
+.product-detail-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .product-detail-title {
+}
+
+.product-detail-title {
     font-size: 28px;
     font-weight: bold;
     margin: 20px 0;
     color: #333;
-  }
-  
-  .product-detail-price {
+}
+
+.product-detail-price {
     font-size: 22px;
     font-weight: bold;
     color: #006A4E;
     margin: 10px 0;
-  }
-  
-  .product-detail-rating {
+}
+
+.product-detail-rating {
     font-size: 18px;
     color: #ff6600;
     margin: 10px 0;
-  }
-  
-  .product-detail-description {
+}
+
+.product-detail-description {
     font-size: 18px;
     color: #555;
     margin: 20px 0;
     text-align: left;
-  }
-  
-  .back-to-list-link {
+}
+
+.back-to-list-link {
     display: block;
     text-align: center;
     margin-top: 30px;
@@ -51,9 +51,36 @@
     font-weight: bold;
     font-size: 18px;
     transition: color 0.2s ease;
-  }
-  
-  .back-to-list-link:hover {
+}
+
+.back-to-list-link:hover {
     color: #ff6600;
-  }
-  
+}
+
+/* Media Query for Phones */
+@media (max-width: 767px) {
+    .product-detail-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .product-detail-title {
+        font-size: 24px;
+    }
+
+    .product-detail-price {
+        font-size: 20px;
+    }
+
+    .product-detail-rating {
+        font-size: 16px;
+    }
+
+    .product-detail-description {
+        font-size: 16px;
+    }
+
+    .back-to-list-link {
+        font-size: 16px;
+    }
+}
